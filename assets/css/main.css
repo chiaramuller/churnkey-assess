@@ -1,0 +1,17 @@
+/* Import Gridlex CSS if using npm */
+@import '~gridlex/dist/gridlex.min.css';
+
+/* Add your custom global styles here */
+
+body {
+  font-family:  Helvetica, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html{
+  height: 100%;
+}
