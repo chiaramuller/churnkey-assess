@@ -24,20 +24,29 @@ export default {
   methods: {
     async register() {
       try {
-        const response = await this.$axios.post('/register', {
+        
+        const { data } = await this.$axios.post('/server/api/register', {
           username: this.username,
           password: this.password
         });
-        this.message = response.data.message;
-        if (response.data.message === 'Registration successful!') {
+
+        this.message = data.message;
+        if (data.message === 'Registration successful!') {
+          console.log("in if");
+
           this.$router.push('/login');
         }
-      } catch (error) {
-        console.error("Error during registration:", error);
-        // Safely access the error message
-        this.message = error.response && error.response.data ? error.response.data.message : 'An error occurred during registration.';
+        else{
+          console.log("in else");
+        }
+      }
+      
+      catch (error) {
+        console.error("Registration error:", error);
+        this.message = error.response.data.message;
       }
     }
   }
 };
 </script>
+

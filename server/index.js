@@ -16,7 +16,7 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-app.post('/api/register', require('./api/register'));
+app.post('/api/register', require('./api/register').default);
 app.post('/api/login', require('./api/login'));
 app.post('/api/logout', require('./api/logout'));
 app.post('/api/updateProfile', require('./api/updateProfile'));
