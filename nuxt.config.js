@@ -89,6 +89,7 @@ export default {
   },
 
   serverMiddleware: [
+    '~/server/index.js',
     { path: '/api/generate-hash', handler: '~/serverMiddleware/generate-hash.js' }
   ],
 
