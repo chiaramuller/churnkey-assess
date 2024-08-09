@@ -20,7 +20,7 @@
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
+    "vue": "^3.4.37",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
